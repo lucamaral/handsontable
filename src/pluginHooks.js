@@ -513,6 +513,9 @@ const REGISTERED_HOOKS = [
    */
   'beforeCellAlignment',
 
+  /* Custom hook */
+  'beforeCellCopy',
+
   /**
    * Callback fired before one or more cells is changed. Its main purpose is to alter changes silently before input.
    *
@@ -552,6 +555,7 @@ const REGISTERED_HOOKS = [
    * ...
    * ```
    */
+
   'beforeChange',
 
   /**

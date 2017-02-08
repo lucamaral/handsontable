@@ -230,7 +230,8 @@ function CopyPastePlugin(instance) {
       let rowSet = [];
 
       arrayEach(copyableColumns, (column) => {
-        rowSet.push(instance.getCopyableData(row, column));
+        let cellValue = instance.getCopyableData(row, column);
+        rowSet.push(Handsontable.hooks.run(instance, 'beforeCellCopy', cellValue, row, column));
       });
 
       dataSet.push(rowSet);
